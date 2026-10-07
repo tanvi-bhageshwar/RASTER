@@ -1,0 +1,6 @@
+streamlit
+vtracer
+resvg-py
+pillow
+numpy
+scikit-image
