@@ -52,12 +52,11 @@ Findings
 
 Which settings would I hand a designer?
 
-TODO (your call, 2–3 sentences): the candidates are precision 5 / speckle 2 / corner 0 (highest SSIM, 1,357 nodes, still 186 colours) and precision 4 / speckle 4 (763 nodes, 63 colours, a small SSIM loss). Say which you would pick and why, after zooming into the feathers of both re-renders.
+Of the five runs, I would pick precision 4 / speckle 4 (763 nodes, 63 colours) over precision 5 / speckle 2 / corner 0 (1,357 nodes, 186 colours). It costs about 0.014 SSIM (0.9366 to 0.9225) but nearly halves the nodes and cuts colours by two thirds, which is much less to clean up by hand.
 
 Still to do
-TODO: run a simple flat logo (plain shape or text) and compare. I expect far fewer nodes, but I have not checked.
-TODO: batch results from python evaluate.py logos on 15–20 logos: average SSIM and nodes, best and worst case, and what the failures share.
-Limitations
+
+- Test on a simple flat logo and on a batch of 15–20 logos. All results above come from one gradient logo.
 Output is flat-colour paths only; VTracer does not recover gradients.
 Text is traced as shapes, not recovered as editable fonts or letter spacing.
 The 1,500-node warning is an arbitrary threshold I chose. It has not been checked with designers.
